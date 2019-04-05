@@ -35,9 +35,6 @@ describe('Bloco #mapRecursive Testes', () => {
       expect(mapRecursive([10,10,5], (item, index, array) => array)).to.be.deep.equal([[10,10,5],[10,10,5],[10,10,5]])
    })
 
-   // it(`mapRecursive([],1) should throw an error with message "func is not a function"`, () => {
-   //    expect(mapRecursive([],1)).to.throw(/func is not a function/)
-   // })
 
    it('mapRecursive() should return []', () => {
       expect(mapRecursive()).to.be.deep.equal([])

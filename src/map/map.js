@@ -1,8 +1,10 @@
-const mapT = (arr = [], func = (item) => item) => {
-
-   // if(typeof func !== 'function'){
-   //    throw new TypeError('func is not a function')
-   // }
+const map = (arr = [], func = (item) => item) => {
+   if(!Array.isArray(arr)){
+      throw new TypeError('The first parameter must be an array')
+   }
+   if(typeof func !== 'function'){
+      throw new TypeError('The secound parameter must be a function')
+   }
    let newArr = []
    for(let i = 0; i < arr.length; i++){
       newArr.push(func(arr[i], i, arr))
@@ -10,4 +12,4 @@ const mapT = (arr = [], func = (item) => item) => {
    return newArr
 }
 
-export default mapT
+export default map
